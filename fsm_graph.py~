@@ -51,7 +51,7 @@ i=0;
 k=0;
 j=0;
 
-with open("example_fsm.vhd") as openfile_2:
+with open("final_system_new/metric_fsm.vhd") as openfile_2:
     lines=openfile_2.readlines()
     for i in range(0,len(lines)):
         line=lines[i]
@@ -84,8 +84,8 @@ with open("example_fsm.vhd") as openfile_2:
                     graph_trans[k].append(transition[j+1])
                     k=k+1;
                     j=j+2;
-
-
+                
+     
             elif y[0]=='next_state':
                 transition.append(y[1][2:-1])
                 graph_trans[k].append(states[k])
@@ -103,7 +103,7 @@ graph_tuple=[tuple(l) for l in graph_trans[0:-1]]
 
 
 
-f=Digraph('finite_state_machine',filename='fsm.gv',engine='fdp') #dot,fdp,neato,circo
+f=Digraph('finite_state_machine',filename='fsm.gv',engine='circo') #dot,fdp,neato,circo
 f.attr(randir='LR',size='8,5')
 f.attr('node',shape='circle',splines='curved',len='5,0')
 
@@ -118,5 +118,5 @@ for edge in graph_tuple:
     	f.edge(edge[0], edge[1])
         f.edge(edge[0], edge[2])
         f.edge(edge[0], edge[3])
-
+		
 f.view()
