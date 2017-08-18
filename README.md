@@ -17,4 +17,4 @@ You are free to make changes if you want.
 
 
 
-![](/home/cpt_peverous/Documents/python_files/fsm.gv.png  "FSM Graph using graphviz library")
+![](fsm.gv.png  "FSM Graph using graphviz library")
