@@ -13,3 +13,8 @@ To execute this python script u must write in linux terminal
 ***python fsm_graph.py 4***	, '4' is the number of states u have described in your FSM.
 
 You are free to make changes if you want.
+
+
+
+
+![](/home/cpt_peverous/Documents/python_files/fsm.gv.png  "FSM Graph using graphviz library")
