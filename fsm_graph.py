@@ -103,6 +103,7 @@ graph_tuple=[tuple(l) for l in graph_trans[0:-1]]
 
 
 
+
 f=Digraph('finite_state_machine',filename='fsm.gv',format='png',engine='fdp') #dot,fdp,neato,circo
 f.attr(randir='LR',size='8,5')
 f.attr('node',shape='circle',splines='curved',len='5,0')
